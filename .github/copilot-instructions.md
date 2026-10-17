@@ -1,109 +1,47 @@
-# Repository Copilot Instructions
+# Copilot Instructions for Cloud & Platform Engineering Academy
 
-## Repository Overview
+## Repository purpose
 
-**Cloud-Platform-Engineering** is currently a placeholder repository. Its only file is `README.md`, which contains just the title "Cloud-Platform-Engineering". No purpose, scope, code, docs or configuration are recorded, so this file deliberately does not describe any architecture or technology. Sibling repositories suggest a cloud/platform-engineering learning or infrastructure focus (for example `Backend-Engineering` covers Docker, Kubernetes, CI/CD, Terraform and AWS as concept notes), but that is not established for this repo.
+This repository is a structured learning academy for cloud and platform engineering. It is designed for backend developers, Java/Go engineers, DevOps practitioners, and early-career platform engineers who want to build practical production skills.
 
-**Manual review needed:** once the repository has real content, replace this file with a specific version (stack, structure, commands, conventions).
+## Content goals
 
-## Technology Stack
+- Teach from fundamentals to advanced platform concepts
+- Prefer original explanations grounded in real operating principles
+- Include practical examples, labs, troubleshooting, and project work
+- Maintain a clear progression from networking and Linux basics to Kubernetes, cloud, automation, and platform operations
 
-None verified. Do not assume Terraform, Kubernetes, AWS, Helm or any other technology. Determine the stack from files that actually exist, or ask the maintainer.
+## Documentation standards
 
-## Repository Structure
+- Use Markdown headings and short sections for clarity
+- Keep examples executable and safe to run locally
+- Prefer clear learning outcomes over filler content
+- Use relative links when referencing repository files
+- Avoid copied educational material and link to official sources instead
 
-```
-README.md    title only
-```
+## Repository structure
 
-## Architecture
+- `docs/` stores prerequisites and setup guidance
+- `modules/` contains the primary curriculum by topic
+- `projects/` contains applied engineering scenarios
+- `certifications/`, `interviews/`, `cheat-sheets/`, and `troubleshooting/` hold study aids
+- `scripts/` stores small automation snippets used in labs
 
-Not defined.
+## Content expectations
 
-## Development Commands
+Every module should include the same basic learning surface:
 
-None. There is no build, test, lint or run tooling.
+- overview
+- why the topic matters
+- prerequisites
+- learning objectives
+- curriculum summary
+- example configuration or code
+- labs and exercises
+- interview style questions
+- troubleshooting notes
+- resource links
 
-## Coding Guidelines
+## Validation
 
-- Before adding content, ask what the repository is for, or infer it only from existing files and state the assumption explicitly.
-- When adding the first real content, choose a layout that separates docs, infrastructure-as-code and scripts, add a README explaining the purpose and how to run/verify things, and keep tool versions pinned and documented.
-- Infrastructure code, if added, must be reproducible, parameterized (no hard-coded account IDs, regions or secrets) and validated with the tool's own checks (for example `terraform validate`) before being described as working.
-- Follow whatever conventions the first committed files establish, then update this instruction file to match.
-
-## Testing
-
-No tests exist. Do not claim any. If tooling is added, document its validation commands here.
-
-## Security
-
-Never commit cloud credentials, tokens, state files containing secrets, kubeconfigs or `.env` files. Prefer environment variables, secret managers and `.gitignore` entries for state and credential files.
-
-## Infrastructure / Deployment
-
-None present.
-
-## Change Guidelines
-
-1. Understand what currently exists (only the README).
-2. Make the smallest coherent change.
-3. Do not invent a target architecture; agree it with the maintainer first.
-4. Do not introduce tooling without stating why.
-5. Validate anything you add with the relevant tool before calling it done.
-6. Do not leave commented-out code.
-7. Do not leave TODO placeholders unless explicitly requested.
-8. Do not fabricate implementation status.
-9. Do not claim something was tested unless it was actually executed.
-
-## Code Quality Rules
-
-- Prefer readable, minimal configuration over clever abstractions.
-- Avoid duplication; keep naming consistent from the first file onward.
-- Handle failure and rollback for anything that changes infrastructure.
-- Avoid unrelated changes during focused work.
-
-## Git Commit Rules
-
-- Never add a `Co-Authored-By` trailer unless I explicitly request it.
-- Never add Claude, Anthropic, GitHub Copilot, OpenAI, ChatGPT, Codex, Cursor, or any AI tool as an author or co-author.
-- Use only the configured Git `user.name` and `user.email`.
-- Do not mention AI assistance in commit messages.
-- Keep commit messages concise and professional.
-- Do not commit automatically unless I explicitly ask.
-- Do not push automatically unless I explicitly ask.
-- Never force-push unless I explicitly request it.
-- Never rewrite Git history unless I explicitly request it.
-
-## Git Commit Attribution Rules
-
-- Never add a `Co-Authored-By` trailer for an AI system.
-- Never add Claude, Anthropic, GitHub Copilot, OpenAI, ChatGPT, Codex, Cursor, Gemini, Devin, or any AI tool as an author or co-author.
-- Never change Git author/committer identity to an AI account.
-- Use only the configured human Git `user.name` and `user.email`.
-- Do not add “Generated by AI”, “Created with AI”, or similar attribution to commit messages.
-- Keep commit messages focused on the technical change.
-- Do not commit automatically unless explicitly requested.
-- Do not push automatically unless explicitly requested.
-- Never rewrite Git history unless explicitly requested.
-
-## AI Assistant Working Rules
-
-When working in this repository:
-
-- Inspect existing code before proposing architecture changes.
-- Do not assume a feature exists without verifying it.
-- Do not create fake implementations to make UI or tests appear complete.
-- Do not generate random metrics, scores, or placeholder business data unless explicitly requested as test/demo data.
-- Clearly separate verified behavior from assumptions.
-- Prefer completing working vertical slices over creating many unfinished placeholders.
-- Preserve repository conventions.
-- Avoid massive rewrites unless explicitly requested.
-- When fixing a bug, identify the underlying cause where practical.
-- When adding functionality, consider error handling and tests.
-- Never expose secrets, API keys, tokens, or credentials.
-- Never hardcode secrets.
-
-## Repository-Specific Rules
-
-- The repository has no established purpose in its files. Ask before scaffolding large structures, and never generate sample "platform" code that pretends to be a working system.
-- Any cloud resource definitions must be safe by default (least privilege, no public exposure, no real account identifiers) and clearly separated by environment.
+This repository is documentation-heavy and does not ship a build pipeline. Validation means checking that files exist, links are sensible, and the educational flow is coherent.
